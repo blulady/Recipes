@@ -10,6 +10,9 @@ jobs:
     # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
     docker:
       - image: cimg/python:3.10.1
+      - image: cimg/postgres:14.1
+        environment:
+          POSTGRES_USER: example
     # Add steps to the job
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:

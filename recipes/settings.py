@@ -82,9 +82,16 @@ WSGI_APPLICATION = "recipes.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
+# currently configured for circle-ci
 DATABASES = {
-  'default': dj_database_url.config()
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'my_media',
+        'USER': 'example',
+        'PASSWORD': '1234',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
 }
 
 # Password validation
